@@ -1,0 +1,312 @@
+[
+  {
+    "id": "DP-20261023-5794",
+    "createdAt": "2026-10-23T08:15:00.000Z",
+    "userId": "usr-001",
+    "customer": {
+      "name": "Kasun Fernando",
+      "phone": "077 123 4567",
+      "email": "kasun.fernando@gmail.com",
+      "address": "45/2 Galle Road, Bambalapitiya, Colombo 04",
+      "district": "Colombo",
+      "orderType": "Retail Home Order",
+      "paymentMethod": "Cash on Delivery"
+    },
+    "items": [
+      {
+        "id": "dp-001",
+        "name": "Pure Dumbara Kithul Treacle",
+        "price": 1850,
+        "quantity": 2,
+        "unit": "750ml Glass Bottle",
+        "image": "assets/images/prod-kithul-treacle.jpg",
+        "category": "kithul",
+        "isWholesale": false
+      },
+      {
+        "id": "dp-003",
+        "name": "Ceylon True Alba Cinnamon Sticks",
+        "price": 1450,
+        "quantity": 1,
+        "unit": "100g Pouch",
+        "image": "assets/images/prod-cinnamon-sticks.jpg",
+        "category": "spices",
+        "isWholesale": false
+      }
+    ],
+    "subtotal": 5150,
+    "note": "Please ensure delivery after 4:00 PM.",
+    "status": "Dispatched",
+    "stageIndex": 4,
+    "stageHistory": [
+      { "stage": 1, "name": "Order Received", "time": "2026-10-23 08:15", "done": true },
+      { "stage": 2, "name": "Factory Confirmed", "time": "2026-10-23 09:30", "done": true },
+      { "stage": 3, "name": "Hygienically Packed", "time": "2026-10-23 11:45", "done": true },
+      { "stage": 4, "name": "Dispatched for Delivery", "time": "2026-10-23 14:00", "done": true },
+      { "stage": 5, "name": "Delivered & Fulfilled", "time": null, "done": false }
+    ],
+    "trackingCourier": "Prompt Xpress Logistics",
+    "trackingWaybill": "PX-LK-882019",
+    "estimatedDelivery": "Within 48 hours to Colombo"
+  },
+  {
+    "id": "DP-20261022-8142",
+    "createdAt": "2026-10-22T14:40:00.000Z",
+    "userId": "usr-003",
+    "customer": {
+      "name": "Kandy Boutique Hotel (Chef Bandara)",
+      "phone": "081 223 9090",
+      "email": "procurement@kandyboutiquehotel.lk",
+      "address": "88 Heerassagala Road, Kandy",
+      "district": "Kandy",
+      "orderType": "Wholesale Business Client",
+      "paymentMethod": "Direct Bank Transfer"
+    },
+    "items": [
+      {
+        "id": "dp-001",
+        "name": "Pure Dumbara Kithul Treacle",
+        "price": 1450,
+        "quantity": 24,
+        "unit": "750ml Glass Bottle",
+        "image": "assets/images/prod-kithul-treacle.jpg",
+        "category": "kithul",
+        "isWholesale": true
+      },
+      {
+        "id": "dp-002",
+        "name": "Artisanal Dumbara Kithul Jaggery",
+        "price": 720,
+        "quantity": 30,
+        "unit": "500g Block",
+        "image": "assets/images/prod-kithul-jaggery.jpg",
+        "category": "kithul",
+        "isWholesale": true
+      }
+    ],
+    "subtotal": 56400,
+    "note": "Urgent delivery to main hotel kitchen.",
+    "status": "Delivered",
+    "stageIndex": 5,
+    "stageHistory": [
+      { "stage": 1, "name": "Order Received", "time": "2026-10-22 14:40", "done": true },
+      { "stage": 2, "name": "Factory Confirmed", "time": "2026-10-22 15:10", "done": true },
+      { "stage": 3, "name": "Hygienically Packed", "time": "2026-10-22 17:00", "done": true },
+      { "stage": 4, "name": "Dispatched for Delivery", "time": "2026-10-23 09:00", "done": true },
+      { "stage": 5, "name": "Delivered & Fulfilled", "time": "2026-10-23 11:30", "done": true }
+    ],
+    "trackingCourier": "Dumbara Factory Rider (Kandy)",
+    "trackingWaybill": "DF-KDY-104",
+    "estimatedDelivery": "Delivered to recipient"
+  },
+  {
+    "id": "DP-20261021-3910",
+    "createdAt": "2026-10-21T10:15:00.000Z",
+    "userId": "usr-002",
+    "customer": {
+      "name": "Dilini Wickramasinghe",
+      "phone": "071 889 2233",
+      "email": "dilini.w@outlook.com",
+      "address": "12 Rajapihilla Mawatha, Kandy",
+      "district": "Kandy",
+      "orderType": "Retail Home Order",
+      "paymentMethod": "Cash on Delivery"
+    },
+    "items": [
+      {
+        "id": "dp-007",
+        "name": "Cold-Pressed Virgin Coconut Oil",
+        "price": 1450,
+        "quantity": 2,
+        "unit": "500ml Glass Bottle",
+        "image": "assets/images/prod-coconut-oil.jpg",
+        "category": "coconut",
+        "isWholesale": false
+      },
+      {
+        "id": "dp-009",
+        "name": "Single Origin Broken Orange Pekoe Tea",
+        "price": 1150,
+        "quantity": 1,
+        "unit": "400g Metal Caddy",
+        "image": "assets/images/prod-bop-tea.jpg",
+        "category": "tea",
+        "isWholesale": false
+      }
+    ],
+    "subtotal": 4050,
+    "note": "",
+    "status": "Delivered",
+    "stageIndex": 5,
+    "stageHistory": [
+      { "stage": 1, "name": "Order Received", "time": "2026-10-21 10:15", "done": true },
+      { "stage": 2, "name": "Factory Confirmed", "time": "2026-10-21 11:00", "done": true },
+      { "stage": 3, "name": "Hygienically Packed", "time": "2026-10-21 13:00", "done": true },
+      { "stage": 4, "name": "Dispatched for Delivery", "time": "2026-10-21 15:30", "done": true },
+      { "stage": 5, "name": "Delivered & Fulfilled", "time": "2026-10-22 09:30", "done": true }
+    ],
+    "trackingCourier": "Dumbara Factory Rider (Kandy)",
+    "trackingWaybill": "DF-KDY-098",
+    "estimatedDelivery": "Delivered to recipient"
+  },
+  {
+    "id": "DP-20261020-6218",
+    "createdAt": "2026-10-20T16:20:00.000Z",
+    "userId": "usr-004",
+    "customer": {
+      "name": "Ceylon Artisanal Bakes (Galle)",
+      "phone": "091 224 5566",
+      "email": "bakes@ceylonartisanal.com",
+      "address": "14 Lighthouse Street, Galle Fort",
+      "district": "Galle",
+      "orderType": "Wholesale Business Client",
+      "paymentMethod": "Direct Bank Transfer"
+    },
+    "items": [
+      {
+        "id": "dp-003",
+        "name": "Ceylon True Alba Cinnamon Sticks",
+        "price": 1150,
+        "quantity": 15,
+        "unit": "100g Pouch",
+        "image": "assets/images/prod-cinnamon-sticks.jpg",
+        "category": "spices",
+        "isWholesale": true
+      },
+      {
+        "id": "dp-004",
+        "name": "Dumbara Highland Cardamom Pods",
+        "price": 1400,
+        "quantity": 10,
+        "unit": "100g Pack",
+        "image": "assets/images/prod-cardamom.jpg",
+        "category": "spices",
+        "isWholesale": true
+      },
+      {
+        "id": "dp-005",
+        "name": "Crushed Highland Black Pepper",
+        "price": 720,
+        "quantity": 20,
+        "unit": "250g Pack",
+        "image": "assets/images/prod-black-pepper.jpg",
+        "category": "spices",
+        "isWholesale": true
+      }
+    ],
+    "subtotal": 45650,
+    "note": "Quarterly spice restock for pastry bakery.",
+    "status": "Delivered",
+    "stageIndex": 5,
+    "stageHistory": [
+      { "stage": 1, "name": "Order Received", "time": "2026-10-20 16:20", "done": true },
+      { "stage": 2, "name": "Factory Confirmed", "time": "2026-10-21 08:30", "done": true },
+      { "stage": 3, "name": "Hygienically Packed", "time": "2026-10-21 11:00", "done": true },
+      { "stage": 4, "name": "Dispatched for Delivery", "time": "2026-10-21 14:00", "done": true },
+      { "stage": 5, "name": "Delivered & Fulfilled", "time": "2026-10-22 16:00", "done": true }
+    ],
+    "trackingCourier": "Certis Lanka Courier",
+    "trackingWaybill": "CLC-GL-55410",
+    "estimatedDelivery": "Delivered to recipient"
+  },
+  {
+    "id": "DP-20261019-1402",
+    "createdAt": "2026-10-19T11:05:00.000Z",
+    "userId": "usr-005",
+    "customer": {
+      "name": "Nuwan Perera",
+      "phone": "076 554 1122",
+      "email": "nuwan.perera@yahoo.com",
+      "address": "77 Dambulla Road, Kurunegala",
+      "district": "Kurunegala",
+      "orderType": "Retail Home Order",
+      "paymentMethod": "Cash on Delivery"
+    },
+    "items": [
+      {
+        "id": "dp-001",
+        "name": "Pure Dumbara Kithul Treacle",
+        "price": 1850,
+        "quantity": 1,
+        "unit": "750ml Glass Bottle",
+        "image": "assets/images/prod-kithul-treacle.jpg",
+        "category": "kithul",
+        "isWholesale": false
+      },
+      {
+        "id": "dp-002",
+        "name": "Artisanal Dumbara Kithul Jaggery",
+        "price": 950,
+        "quantity": 1,
+        "unit": "500g Block",
+        "image": "assets/images/prod-kithul-jaggery.jpg",
+        "category": "kithul",
+        "isWholesale": false
+      },
+      {
+        "id": "dp-009",
+        "name": "Single Origin Broken Orange Pekoe Tea",
+        "price": 1150,
+        "quantity": 1,
+        "unit": "400g Metal Caddy",
+        "image": "assets/images/prod-bop-tea.jpg",
+        "category": "tea",
+        "isWholesale": false
+      }
+    ],
+    "subtotal": 3950,
+    "note": "",
+    "status": "Delivered",
+    "stageIndex": 5,
+    "stageHistory": [
+      { "stage": 1, "name": "Order Received", "time": "2026-10-19 11:05", "done": true },
+      { "stage": 2, "name": "Factory Confirmed", "time": "2026-10-19 12:00", "done": true },
+      { "stage": 3, "name": "Hygienically Packed", "time": "2026-10-19 15:00", "done": true },
+      { "stage": 4, "name": "Dispatched for Delivery", "time": "2026-10-20 09:00", "done": true },
+      { "stage": 5, "name": "Delivered & Fulfilled", "time": "2026-10-21 14:00", "done": true }
+    ],
+    "trackingCourier": "Prompt Xpress Logistics",
+    "trackingWaybill": "PX-LK-880941",
+    "estimatedDelivery": "Delivered to recipient"
+  },
+  {
+    "id": "DP-20261023-9251",
+    "createdAt": "2026-10-23T16:30:00.000Z",
+    "userId": "usr-001",
+    "customer": {
+      "name": "Kasun Fernando",
+      "phone": "077 123 4567",
+      "email": "kasun.fernando@gmail.com",
+      "address": "45/2 Galle Road, Bambalapitiya, Colombo 04",
+      "district": "Colombo",
+      "orderType": "Retail Home Order",
+      "paymentMethod": "Cash on Delivery"
+    },
+    "items": [
+      {
+        "id": "dp-012",
+        "name": "Dumbara Ceylon Gift Hamper",
+        "price": 8500,
+        "quantity": 1,
+        "unit": "Luxury Handwoven Box",
+        "image": "assets/images/prod-kithul-treacle.jpg",
+        "category": "wholesale",
+        "isWholesale": false
+      }
+    ],
+    "subtotal": 8500,
+    "note": "Festival celebration gift.",
+    "status": "Confirmed",
+    "stageIndex": 2,
+    "stageHistory": [
+      { "stage": 1, "name": "Order Received", "time": "2026-10-23 16:30", "done": true },
+      { "stage": 2, "name": "Factory Confirmed", "time": "2026-10-23 17:00", "done": true },
+      { "stage": 3, "name": "Hygienically Packed", "time": null, "done": false },
+      { "stage": 4, "name": "Dispatched for Delivery", "time": null, "done": false },
+      { "stage": 5, "name": "Delivered & Fulfilled", "time": null, "done": false }
+    ],
+    "trackingCourier": "Prompt Xpress Logistics",
+    "trackingWaybill": "Pending dispatch",
+    "estimatedDelivery": "Within 48 hours following packing"
+  }
+]

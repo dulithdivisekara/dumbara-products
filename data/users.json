@@ -1,0 +1,72 @@
+[
+  {
+    "id": "usr-001",
+    "name": "Kasun Fernando",
+    "email": "kasun.fernando@gmail.com",
+    "phone": "077 123 4567",
+    "password": "customer123",
+    "district": "Colombo",
+    "address": "45/2 Galle Road, Bambalapitiya, Colombo 04",
+    "type": "Retail",
+    "status": "Active",
+    "ordersCount": 4,
+    "totalSpent": 15400,
+    "createdAt": "2026-08-12T10:30:00.000Z"
+  },
+  {
+    "id": "usr-002",
+    "name": "Dilini Wickramasinghe",
+    "email": "dilini.w@outlook.com",
+    "phone": "071 889 2233",
+    "password": "customer123",
+    "district": "Kandy",
+    "address": "12 Rajapihilla Mawatha, Kandy",
+    "type": "Retail",
+    "status": "Active",
+    "ordersCount": 2,
+    "totalSpent": 6800,
+    "createdAt": "2026-09-04T14:20:00.000Z"
+  },
+  {
+    "id": "usr-003",
+    "name": "Kandy Boutique Hotel (Chef Bandara)",
+    "email": "procurement@kandyboutiquehotel.lk",
+    "phone": "081 223 9090",
+    "password": "customer123",
+    "district": "Kandy",
+    "address": "88 Heerassagala Road, Kandy",
+    "type": "Wholesale",
+    "status": "Active",
+    "ordersCount": 6,
+    "totalSpent": 142500,
+    "createdAt": "2026-07-15T09:15:00.000Z"
+  },
+  {
+    "id": "usr-004",
+    "name": "Ceylon Artisanal Bakes (Galle)",
+    "email": "bakes@ceylonartisanal.com",
+    "phone": "091 224 5566",
+    "password": "customer123",
+    "district": "Galle",
+    "address": "14 Lighthouse Street, Galle Fort",
+    "type": "Wholesale",
+    "status": "Active",
+    "ordersCount": 3,
+    "totalSpent": 86400,
+    "createdAt": "2026-09-22T11:45:00.000Z"
+  },
+  {
+    "id": "usr-005",
+    "name": "Nuwan Perera",
+    "email": "nuwan.perera@yahoo.com",
+    "phone": "076 554 1122",
+    "password": "customer123",
+    "district": "Kurunegala",
+    "address": "77 Dambulla Road, Kurunegala",
+    "type": "Retail",
+    "status": "Active",
+    "ordersCount": 1,
+    "totalSpent": 3700,
+    "createdAt": "2026-10-10T16:05:00.000Z"
+  }
+]

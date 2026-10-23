@@ -24,11 +24,16 @@
   <!-- Top Announcement Bar -->
   <div class="announcement-bar">
     <div class="site-container announcement-inner">
-      <div class="announcement-text">
+      <div class="announcement-text" data-i18n="topbar_delivery">
         Wholesale and Retail Orders: Free Islandwide Delivery for Orders over රු 5,000
       </div>
       <div class="announcement-meta">
-        <span>Hotline: 077 737 2863</span>
+        <div class="lang-switcher" data-ui="lang">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-divider">|</span>
+          <button type="button" class="lang-btn" data-lang="si">සිංහල</button>
+        </div>
+        <span data-i18n="topbar_phone">Hotline: 077 737 2863</span>
         <span class="currency-badge">LKR (රු)</span>
       </div>
     </div>
@@ -48,16 +53,31 @@
 
       <!-- Desktop Nav Menu -->
       <nav class="nav-menu" aria-label="Primary Navigation">
-        <a href="#products" class="nav-link">Shop Catalog</a>
-        <a href="#categories" class="nav-link">Collections</a>
-        <a href="#wholesale" class="nav-link">Wholesale Supply</a>
-        <a href="#story" class="nav-link">Our Heritage</a>
-        <a href="#reviews" class="nav-link">Customer Reviews</a>
-        <a href="#faqs" class="nav-link">Help & FAQs</a>
+        <a href="#products" class="nav-link" data-i18n="nav_products">Shop Catalog</a>
+        <a href="#categories" class="nav-link" data-i18n="nav_collections">Collections</a>
+        <a href="#wholesale" class="nav-link" data-i18n="nav_wholesale">Wholesale Supply</a>
+        <a href="#story" class="nav-link" data-i18n="nav_heritage">Our Heritage</a>
+        <a href="#reviews" class="nav-link" data-i18n="reviews_title">Customer Reviews</a>
+        <a href="#faqs" class="nav-link" data-i18n="faq_title">Help & FAQs</a>
+        <button type="button" class="nav-link mobile-only-link" id="mobileTrackOrderLink" style="background: transparent; border: none; text-align: left; font-size: inherit; font-weight: inherit; cursor: pointer;" data-i18n="nav_track">Track Order</button>
       </nav>
 
       <!-- Header Utilities -->
       <div class="header-actions">
+        <!-- Mobile/Tablet Language Toggle -->
+        <button class="lang-toggle-mobile" id="langToggleMobile" title="Switch Language">
+          <span class="lang-mobile-label">සිංහල</span>
+        </button>
+
+        <!-- Customer Account Button -->
+        <button class="action-btn" id="accountBtn" title="Customer Account" aria-label="Customer Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="user-active-dot" id="userActiveDot" style="display: none;"></span>
+        </button>
+
         <!-- Live Search Button -->
         <button class="action-btn search-toggle-btn" title="Search products" aria-label="Search products">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -689,22 +709,217 @@
   <div class="modal-backdrop" id="trackOrderModal" data-ui="trackorder">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h3 class="modal-title">Track Your Order Status</h3>
+        <h3 class="modal-title" data-i18n="track_modal_title">Track Delivery Status</h3>
         <button class="modal-close-btn" id="trackOrderClose" aria-label="Close modal">&times;</button>
       </div>
       <div class="modal-body">
         <form id="trackOrderForm" style="margin-bottom: 20px;">
           <div class="calc-form-group">
-            <label for="trackIdInput" class="calc-label">Enter Order Reference ID:</label>
+            <label for="trackIdInput" class="calc-label" data-i18n="track_placeholder">Enter Order Reference ID:</label>
             <div style="display: flex; gap: 8px;">
-              <input type="text" id="trackIdInput" class="calc-input" placeholder="e.g. DP-20261023-1234" required />
-              <button type="submit" class="btn btn-primary btn-sm">Track</button>
+              <input type="text" id="trackIdInput" class="calc-input" placeholder="e.g. DP-20261023-5794" required />
+              <button type="submit" class="btn btn-primary btn-sm" data-i18n="track_btn">Track Status</button>
             </div>
           </div>
         </form>
         <div id="trackResult">
-          <!-- Populated dynamically -->
+          <!-- Dynamically populated with 5-stage timeline from app.js -->
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Authentication Modal -->
+  <div class="modal-backdrop" id="customerAuthModal" data-ui="customerauth">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="authModalTitle">Customer Account</h3>
+        <button class="modal-close-btn" id="customerAuthClose" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="authTabLogin" type="button">Customer Sign In</button>
+          <button class="auth-tab" id="authTabRegister" type="button">Create Account</button>
+        </div>
+
+        <div id="authNotice" style="display: none; padding: 10px 14px; margin-bottom: 16px; font-size: var(--font-small-size); background-color: #FEE2E2; color: #991B1B;"></div>
+
+        <!-- Form 1: Sign In -->
+        <form id="customerLoginForm">
+          <div class="calc-form-group">
+            <label for="loginEmail" class="calc-label">Email Address or WhatsApp Phone *</label>
+            <input type="text" id="loginEmail" class="calc-input" placeholder="e.g. kasun.fernando@gmail.com or 077 123 4567" required />
+          </div>
+          <div class="calc-form-group">
+            <label for="loginPassword" class="calc-label">Password *</label>
+            <input type="password" id="loginPassword" class="calc-input" placeholder="Enter account password" required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Sign In to Account</button>
+
+          <div class="demo-account-buttons">
+            <p style="font-size: var(--font-caption-size); color: var(--color-ink-muted); margin-bottom: 8px; font-weight: 600;">1-Click Demo Accounts for Testing:</p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <button type="button" class="btn btn-outline btn-sm demo-login-btn" data-email="kasun.fernando@gmail.com" data-pass="customer123">
+                Demo Retail: Kasun (Colombo)
+              </button>
+              <button type="button" class="btn btn-outline btn-sm demo-login-btn" data-email="procurement@kandyboutiquehotel.lk" data-pass="customer123">
+                Demo Wholesale: Hotel (Kandy)
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Form 2: Register -->
+        <form id="customerRegisterForm" style="display: none;">
+          <div class="calc-form-group">
+            <label for="regName" class="calc-label">Full Name or Business Name *</label>
+            <input type="text" id="regName" class="calc-input" placeholder="e.g. Kasun Fernando" required />
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="calc-form-group">
+              <label for="regPhone" class="calc-label">WhatsApp Number *</label>
+              <input type="tel" id="regPhone" class="calc-input" placeholder="e.g. 077 123 4567" required />
+            </div>
+            <div class="calc-form-group">
+              <label for="regEmail" class="calc-label">Email Address *</label>
+              <input type="email" id="regEmail" class="calc-input" placeholder="e.g. kasun@example.com" required />
+            </div>
+          </div>
+          <div class="calc-form-group">
+            <label for="regPassword" class="calc-label">Create Password *</label>
+            <input type="password" id="regPassword" class="calc-input" placeholder="Choose a password" required />
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="calc-form-group">
+              <label for="regDistrict" class="calc-label">Primary District *</label>
+              <select id="regDistrict" class="calc-select" required>
+                <option value="Kandy" selected>Kandy (Local 24h)</option>
+                <option value="Colombo">Colombo</option>
+                <option value="Gampaha">Gampaha</option>
+                <option value="Kalutara">Kalutara</option>
+                <option value="Matale">Matale</option>
+                <option value="Nuwara Eliya">Nuwara Eliya</option>
+                <option value="Galle">Galle</option>
+                <option value="Matara">Matara</option>
+                <option value="Kurunegala">Kurunegala</option>
+                <option value="Kegalle">Kegalle</option>
+                <option value="Ratnapura">Ratnapura</option>
+                <option value="Other District">Other District</option>
+              </select>
+            </div>
+            <div class="calc-form-group">
+              <label for="regType" class="calc-label">Account Category</label>
+              <select id="regType" class="calc-select">
+                <option value="Retail">Retail Household Buyer</option>
+                <option value="Wholesale">Wholesale Commercial Client</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc-form-group">
+            <label for="regAddress" class="calc-label">Default Delivery Street Address *</label>
+            <textarea id="regAddress" class="calc-input" rows="2" placeholder="Street address, door number, town..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create Dumbara Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Profile & Order History Modal -->
+  <div class="modal-backdrop" id="customerProfileModal" data-ui="customerprofile">
+    <div class="modal-dialog modal-full">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <h3 class="modal-title">Customer Account Profile</h3>
+          <span id="profileTypeBadge" style="background-color: var(--color-accent-subtle); color: var(--color-accent-dark); font-size: var(--font-caption-size); font-weight: 700; padding: 2px 8px;">RETAIL</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <button class="btn btn-outline btn-sm" id="customerLogoutBtn" style="color: #DC2626;">Log Out</button>
+          <button class="modal-close-btn" id="customerProfileClose" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 24px;">
+          <!-- Profile Card -->
+          <div style="background-color: var(--color-ground-soft); padding: 20px;">
+            <h4 style="font-size: 1.125rem; margin-bottom: 4px;" id="profileName">Kasun Fernando</h4>
+            <p style="font-size: var(--font-small-size); color: var(--color-ink-muted); margin-bottom: 16px;" id="profileEmail">kasun.fernando@gmail.com</p>
+
+            <form id="profileUpdateForm">
+              <div class="calc-form-group">
+                <label for="profilePhone" class="calc-label">WhatsApp Contact Number</label>
+                <input type="tel" id="profilePhone" class="calc-input" required />
+              </div>
+              <div class="calc-form-group">
+                <label for="profileDistrict" class="calc-label">Delivery District</label>
+                <select id="profileDistrict" class="calc-select" required>
+                  <option value="Kandy">Kandy (Local 24h)</option>
+                  <option value="Colombo">Colombo</option>
+                  <option value="Gampaha">Gampaha</option>
+                  <option value="Kalutara">Kalutara</option>
+                  <option value="Matale">Matale</option>
+                  <option value="Nuwara Eliya">Nuwara Eliya</option>
+                  <option value="Galle">Galle</option>
+                  <option value="Matara">Matara</option>
+                  <option value="Kurunegala">Kurunegala</option>
+                  <option value="Kegalle">Kegalle</option>
+                  <option value="Ratnapura">Ratnapura</option>
+                  <option value="Other District">Other District</option>
+                </select>
+              </div>
+              <div class="calc-form-group">
+                <label for="profileAddress" class="calc-label">Saved Delivery Address</label>
+                <textarea id="profileAddress" class="calc-input" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm btn-block">Save Address Changes</button>
+            </form>
+          </div>
+
+          <!-- Order History -->
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h4 style="font-size: 1.125rem;">My Orders & Delivery History</h4>
+              <span id="profileOrdersCount" style="font-size: var(--font-small-size); color: var(--color-ink-muted);">0 Orders</span>
+            </div>
+            <div style="overflow-x: auto;" id="profileOrdersTable">
+              <!-- Dynamically rendered order history -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Verification & Login Modal -->
+  <div class="modal-backdrop" id="adminLoginModal" data-ui="adminlogin">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">Merchant Verification Gate</h3>
+          <p style="font-size: var(--font-caption-size); color: var(--color-ink-muted); margin-top: 4px;">Dumbara Products Management Portal</p>
+        </div>
+        <button class="modal-close-btn" id="adminLoginClose" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="adminLoginNotice" style="display: none; padding: 10px 14px; margin-bottom: 16px; font-size: var(--font-small-size); background-color: #FEE2E2; color: #991B1B;"></div>
+        <form id="adminLoginForm">
+          <div class="calc-form-group">
+            <label for="adminUser" class="calc-label">Administrator Username *</label>
+            <input type="text" id="adminUser" class="calc-input" placeholder="e.g. admin" required autocomplete="username" />
+          </div>
+          <div class="calc-form-group">
+            <label for="adminPass" class="calc-label">Administrator Password *</label>
+            <input type="password" id="adminPass" class="calc-input" placeholder="Enter admin password" required autocomplete="current-password" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Authenticate & Access Portal</button>
+
+          <div class="demo-account-buttons">
+            <p style="font-size: var(--font-caption-size); color: var(--color-ink-muted); margin-bottom: 8px; font-weight: 600;">1-Click Evaluation Credentials:</p>
+            <button type="button" class="btn btn-outline btn-sm btn-block" id="demoAdminLoginBtn">
+              Quick Admin Access (admin / dumbara2026)
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -715,19 +930,83 @@
       <div class="modal-header">
         <div style="display: flex; align-items: center; gap: 12px;">
           <h3 class="modal-title">Dumbara Products Merchant Portal</h3>
-          <span style="background-color: var(--color-accent-subtle); color: var(--color-accent-dark); font-size: var(--font-small-size); font-weight: 700; padding: 2px 8px;">ADMIN</span>
+          <span style="background-color: var(--color-accent-subtle); color: var(--color-accent-dark); font-size: var(--font-caption-size); font-weight: 700; padding: 2px 8px;">PORTAL</span>
         </div>
-        <button class="modal-close-btn" id="adminClose" aria-label="Close modal">&times;</button>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <span style="font-size: var(--font-caption-size); color: var(--color-ink-muted);">Signed in: <strong id="adminSessionUser">admin</strong></span>
+          <button class="btn btn-outline btn-sm" id="adminLogoutBtn" style="color: #DC2626;">Sign Out</button>
+          <button class="modal-close-btn" id="adminClose" aria-label="Close modal">&times;</button>
+        </div>
       </div>
       <div class="modal-body">
         <div class="admin-tabs">
-          <button class="admin-tab active" data-tab="products">Product Catalog Management</button>
-          <button class="admin-tab" data-tab="orders">Customer Orders</button>
-          <button class="admin-tab" data-tab="backup">Data Backup & Reset</button>
+          <button class="admin-tab active" data-tab="dashboard">Dashboard & Analytics</button>
+          <button class="admin-tab" data-tab="products">Product Catalog</button>
+          <button class="admin-tab" data-tab="orders">Customer Orders & Delivery</button>
+          <button class="admin-tab" data-tab="users">Customer Accounts</button>
+          <button class="admin-tab" data-tab="backup">Settings & Security</button>
         </div>
 
-        <!-- Tab 1: Products Management -->
-        <div id="adminProductSection">
+        <!-- Tab 1: Executive Dashboard & Analytics -->
+        <div id="adminDashboardSection">
+          <!-- 5 Real-Time KPI Cards -->
+          <div class="admin-kpi-grid" id="adminKpiGrid">
+            <!-- Dynamically populated from admin.js -->
+          </div>
+
+          <!-- Charts Row -->
+          <div class="admin-charts-grid">
+            <!-- Chart 1: Revenue Over Time -->
+            <div class="admin-chart-box">
+              <div class="chart-header">
+                <div>
+                  <h4 class="chart-title">Gross Revenue Trend (LKR)</h4>
+                  <p style="font-size: var(--font-caption-size); color: var(--color-ink-muted);">Monthly cumulative sales performance</p>
+                </div>
+                <div class="chart-legend">
+                  <span style="display: flex; align-items: center; gap: 4px;">
+                    <span style="width: 10px; height: 10px; background-color: var(--color-accent-dark); display: inline-block;"></span> Revenue
+                  </span>
+                </div>
+              </div>
+              <div class="svg-chart-container" id="revenueChartContainer">
+                <!-- SVG Bar Chart dynamically injected -->
+              </div>
+            </div>
+
+            <!-- Chart 2: Category Revenue Distribution -->
+            <div class="admin-chart-box">
+              <div class="chart-header">
+                <div>
+                  <h4 class="chart-title">Sales by Ceylon Category</h4>
+                  <p style="font-size: var(--font-caption-size); color: var(--color-ink-muted);">Revenue contribution breakdown</p>
+                </div>
+              </div>
+              <div class="svg-chart-container" id="categoryChartContainer">
+                <!-- SVG Horizontal Distribution injected -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery Status Metrics Row -->
+          <div style="margin-bottom: 24px;">
+            <h4 style="font-size: var(--font-body-size); margin-bottom: 12px;">Active Orders Progression Funnel</h4>
+            <div class="status-summary-row" id="adminStatusFunnel">
+              <!-- Dynamically populated status pills -->
+            </div>
+          </div>
+
+          <!-- Top Selling Products Leaderboard -->
+          <div>
+            <h4 style="font-size: var(--font-body-size); margin-bottom: 12px;">Top Performing Products</h4>
+            <div style="overflow-x: auto;" id="adminTopProductsTable">
+              <!-- Dynamically populated top products -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Products Management -->
+        <div id="adminProductSection" style="display: none;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
             <p style="font-size: var(--font-small-size); color: var(--color-ink-muted);">Manage product listings, pricing, and stock levels in real time.</p>
             <button class="btn btn-primary btn-sm" id="adminAddProductBtn">+ Add New Product</button>
@@ -737,25 +1016,63 @@
           </div>
         </div>
 
-        <!-- Tab 2: Orders Management -->
+        <!-- Tab 3: Orders & Delivery Stages Management -->
         <div id="adminOrderSection" style="display: none;">
           <div style="margin-bottom: 16px;">
-            <p style="font-size: var(--font-small-size); color: var(--color-ink-muted);">Review and update status for incoming wholesale and retail orders.</p>
+            <p style="font-size: var(--font-small-size); color: var(--color-ink-muted);">
+              Manage incoming retail and wholesale orders. Update the 5-stage delivery status to notify customers in real time.
+            </p>
           </div>
           <div style="overflow-x: auto;" id="adminOrdersTable">
             <!-- Orders dynamically rendered from admin.js -->
           </div>
         </div>
 
-        <!-- Tab 3: Backup & Reset -->
+        <!-- Tab 4: Customer Accounts Directory -->
+        <div id="adminUserSection" style="display: none;">
+          <div style="margin-bottom: 16px;">
+            <p style="font-size: var(--font-small-size); color: var(--color-ink-muted);">
+              Directory of registered retail households and wholesale commercial partners.
+            </p>
+          </div>
+          <div style="overflow-x: auto;" id="adminUsersTable">
+            <!-- Users directory dynamically rendered from admin.js -->
+          </div>
+        </div>
+
+        <!-- Tab 5: Settings & Security -->
         <div id="adminBackupSection" style="display: none; padding: 16px 0;">
-          <h4 style="margin-bottom: 12px;">Database Portability</h4>
-          <p style="font-size: var(--font-small-size); color: var(--color-ink-muted); margin-bottom: 24px;">
-            Export the current product catalog, customer orders, and reviews as a portable JSON file, or restore factory default sample products.
-          </p>
-          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-            <button class="btn btn-outline" id="exportJsonBtn">Download JSON Backup</button>
-            <button class="btn btn-outline" id="resetDbBtn" style="color: #DC2626;">Reset Catalog to Default</button>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+            <!-- Credential Management -->
+            <div style="background-color: var(--color-ground-soft); padding: 24px;">
+              <h4 style="margin-bottom: 8px;">Admin Credentials & Password</h4>
+              <p style="font-size: var(--font-small-size); color: var(--color-ink-muted); margin-bottom: 16px;">
+                Update the administrator username and password for merchant portal access.
+              </p>
+              <form id="adminCredsForm">
+                <div class="calc-form-group">
+                  <label for="newAdminUser" class="calc-label">Administrator Username *</label>
+                  <input type="text" id="newAdminUser" class="calc-input" required />
+                </div>
+                <div class="calc-form-group">
+                  <label for="newAdminPass" class="calc-label">New Administrator Password *</label>
+                  <input type="password" id="newAdminPass" class="calc-input" required />
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Update Admin Password</button>
+              </form>
+            </div>
+
+            <!-- Database Portability & Reset -->
+            <div>
+              <h4 style="margin-bottom: 8px;">Database Portability & Recovery</h4>
+              <p style="font-size: var(--font-small-size); color: var(--color-ink-muted); margin-bottom: 24px;">
+                Export the complete product catalog, customer orders, users directory, and reviews as a portable JSON file, or restore factory default sample records.
+              </p>
+              <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <button class="btn btn-outline" id="exportJsonBtn">Download JSON Backup</button>
+                <button class="btn btn-outline" id="resetDbBtn" style="color: #DC2626;">Reset Database to Default</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

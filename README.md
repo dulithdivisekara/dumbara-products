@@ -61,14 +61,43 @@ This platform faithfully translates a luxury Shopify theme from Figma (`odW0fSYW
   - **100+ Units**: 35% volume discount
   - 1-click button to add wholesale bulk orders directly to the cart.
 
-### 2. Pre-Gateway Ordering Workflow
-- Streamlined pre-gateway order placement designed specifically for the Sri Lankan logistics landscape.
-- Customers specify Name, WhatsApp/Phone, Street Address, District (with dedicated local 24-hour Kandy delivery), Client Type, and Payment Preference (Cash on Delivery / Direct Bank Transfer).
-- Instant Order ID generation (e.g. `DP-20261023-5794`).
-- Automated 1-click **WhatsApp Order Dispatch** link formatted directly to message the factory fulfillment hotline at `+94 77 737 2863`.
+### 2. Sinhala Language Localization (EN | සිංහල)
+- Instant bilingual header switcher toggling between English and Sinhala without full-page reloads.
+- Dynamically updates navigation items, storefront section titles, filter categories, buttons, and switches product names to authentic native Kandyan titles (`sinhalaName`).
+- Language preference is automatically remembered in `localStorage` across user sessions.
 
-### 3. Decoupled JSON Data Architecture
-- Zero hardcoded content: every product, price, category, review, and company detail is loaded from structured JSON files in the `/data` folder.
+### 3. Customer User Management & Profiles
+- **Authentication**: Customer registration and sign in with email or WhatsApp phone number.
+- **Profile & Saved Addresses**: Customers maintain default delivery addresses and preferred district for instantaneous auto-filled checkout.
+- **Order History ("My Orders")**: Real-time table of past orders, item breakdown, monetary totals, and 1-click order tracking shortcuts.
+- **Quick Demo Accounts**: 1-click test buttons for Kasun Fernando (Retail) and Chef Bandara (Wholesale).
+
+### 4. Detailed 5-Stage Order Tracking & Delivery Progression
+- Multi-stage visual delivery stepper for tracking orders in real time:
+  1. **Order Received** (*ඇණවුම ලැබුණි*): Initial registration and automated timestamp.
+  2. **Factory Confirmed** (*කර්මාන්ත ශාලාවෙන් තහවුරු කළා*): Order reviewed by the Wattegama production team.
+  3. **Hygienically Packed** (*ඇසුරුම් කිරීම අවසන්*): Sealed and batch-coded with tamper-evident packaging.
+  4. **Dispatched for Delivery** (*බෙදාහැරීමට භාර දෙන ලදී*): Handed to regional courier or local 24-hour Kandy delivery rider.
+  5. **Delivered & Fulfilled** (*සාර්ථකව භාර දෙන ලදී*): Order completed.
+- Displays logistics partner, waybill code, delivery estimate window, package contents, and direct 1-click WhatsApp inquiry to hotline `+94 77 737 2863`.
+
+### 5. Protected Merchant Admin Portal & Security
+- **Authentication Gate**: Protected by username and password credentials (default: `admin` / `dumbara2026`).
+- **Credential Management**: Administrators can update their username and password directly in the portal settings tab.
+- **Session Control**: Secure persistent session with dedicated Sign Out button in the admin header.
+
+### 6. Executive Admin Dashboard & Sales Statistics Graphs
+- **Real-Time KPI Cards**: Gross Revenue, Total Orders count, Average Order Value (AOV), Customer Count, and Wholesale Volume share.
+- **Revenue Over Time Chart**: Pure-SVG bar chart illustrating monthly gross sales performance.
+- **Category Revenue Share Chart**: Visual distribution comparing Kithul, Spices, Coconut, Tea, and Wholesale tiers.
+- **Delivery Progression Funnel**: Live counts for orders across Received, Confirmed, Packed, Dispatched, Delivered, and Cancelled.
+- **Top Selling Products Leaderboard**: Ranking of highest performing Ceylon goods by units sold and revenue.
+
+### 7. Customer Accounts Directory
+- Searchable merchant table of registered retail and wholesale customers with contact details, district, order counts, lifetime spend, and status controls (`Active` / `Suspended`).
+
+### 8. Decoupled JSON Data Architecture
+- Zero hardcoded content: every product, price, category, review, customer account, order, translation, and company detail is loaded from structured JSON files in the `/data` folder.
 - Easily maintained, updated, or integrated with future ERP/PIM backends without modifying frontend template markup.
 
 ---
@@ -78,23 +107,31 @@ This platform faithfully translates a luxury Shopify theme from Figma (`odW0fSYW
 ### User / Customer Operations
 | Module | Create | Read | Update | Delete |
 |---|---|---|---|---|
+| **Customer Accounts** | Register new account with delivery address | Profile overview & account tier badge | Update delivery address & contact phone | Customer account logout |
 | **Shopping Cart** | Add product variant from card or modal | Slide-out drawer with live counts & subtotal | Live quantity stepper `[ - ] [ qty ] [ + ]` & order notes | 1-click item removal & empty cart handler |
 | **Wishlist** | 1-click heart toggle to save item | Visual saved state on product cards | Synchronized with `localStorage` | Toggle again to remove |
-| **Order Placement** | Submit order with address & district | Instant confirmation modal with breakdown | Status tracks live via order store | Cancel pending orders using Order ID |
+| **Order Placement** | Submit order with address & district | Instant confirmation modal with breakdown | Status tracks live via 5-stage tracker | Cancel pending orders using Order ID |
+| **Order History** | Created on order completion | "My Orders" customer table | Auto-synced with merchant updates | Cancel eligible pending orders |
 | **Reviews** | Customer review submission | Displayed on product quick views & testimonials | Verified badge logic | Dynamic filtering |
 
-### Admin Merchant Portal (Discreet Footer Link)
-Accessible via the **"Merchant Admin Portal"** link located in the footer:
+### Admin Merchant Portal
+Accessible via the **"Merchant Admin Portal"** link located in the footer (guarded by admin login):
+- **Executive Analytics**: Real-time sales statistics, pure-SVG revenue charts, and top product leaderboards.
 - **Product Catalog CRUD**:
   - **Create**: Add new products with title, Sinhala name, category, retail price, wholesale price, pack unit, stock, image, and description.
   - **Read**: Searchable and filterable table of all products with stock indicators.
   - **Update**: Edit product details, update pricing, or toggle stock availability ("In Stock" / "Out of Stock").
   - **Delete**: Remove discontinued products with confirmation dialog.
-- **Orders Management CRUD**:
+- **Orders & Delivery Stages CRUD**:
   - **Read**: Real-time table of incoming retail and wholesale orders with customer contact and item list.
-  - **Update**: Update order status (`Pending` -> `Confirmed` -> `Dispatched` -> `Completed` -> `Cancelled`).
+  - **Update**: Advance delivery status through the 5 stages (`Received` -> `Confirmed` -> `Packed` -> `Dispatched` -> `Delivered`).
   - **Delete**: Delete test orders.
-- **Database Backup & Portability**:
+- **Customer Directory CRUD**:
+  - **Read**: Directory of registered customers with lifetime spend and order volume.
+  - **Update**: Toggle customer status (`Active` / `Suspended`).
+  - **Delete**: Remove test customer profiles.
+- **Admin Security & Database Portability**:
+  - Change administrator username and password.
   - Export database to a portable JSON backup file.
   - 1-click reset to factory default sample catalog.
 
