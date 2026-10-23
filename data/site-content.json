@@ -1,0 +1,85 @@
+{
+  "brand": {
+    "name": "Dumbara Products",
+    "sinhalaName": "දුම්බර නිෂ්පාදන",
+    "tagline": "The Excellence with Taste & Quality",
+    "sinhalaTagline": "රස ගුණ සමඟ විශිෂ්ටත්වය",
+    "established": "Kandy, Sri Lanka",
+    "description": "Premier manufacturing and distribution company based in Wattegama, Kandy, delivering 100% natural, authentic Ceylon agro-products to wholesale and retail clients islandwide."
+  },
+  "contact": {
+    "address": "44/A, Dumbara Niwasa, Narandanda Road, Wattegama, Kandy, Sri Lanka",
+    "phone": "077 737 2863",
+    "phoneFormatted": "+94 77 737 2863",
+    "email": "dumbaraproducts.dpl@gmail.com",
+    "facebook": "https://www.facebook.com/profile.php?id=61572546974606",
+    "hours": "Monday to Saturday: 8:00 AM - 6:00 PM"
+  },
+  "announcement": {
+    "text": "Wholesale and Retail Orders: Free Islandwide Delivery for Orders over රු 5,000",
+    "subtext": "Direct from Kandy Factory",
+    "hotline": "Hotline: 077 737 2863"
+  },
+  "hero": {
+    "title": "Authentic Ceylon Manufacturing & Distribution",
+    "subtitle": "Direct from the lush foothills of the Dumbara mountain range in Kandy. We manufacture, refine, and distribute pure Kithul sweeteners, highland spices, and organic essentials for retail families and wholesale enterprises across Sri Lanka.",
+    "primaryCta": "Explore Products",
+    "secondaryCta": "Wholesale Inquiries"
+  },
+  "story": {
+    "badge": "Heritage & Craft",
+    "title": "Born in the Dumbara Valley",
+    "paragraph1": "Nestled near the historic Knuckles mountain range, Dumbara has been celebrated for centuries as Sri Lanka's cultural heartland for indigenous spices and artisanal Kithul tapping. Dumbara Products was founded to preserve this authentic heritage while introducing modern hygienic packaging and rigorous quality standards.",
+    "paragraph2": "We work directly with traditional highland tappers and smallholder farming families in Wattegama, Pathadumbara, and surrounding hill country villages. Every batch of treacle, jaggery, cinnamon, and pepper undergoes strict purity testing to ensure zero chemical adulteration and complete freshness.",
+    "stats": [
+      { "value": "100%", "label": "Pure & Natural Sap" },
+      { "value": "50+", "label": "Local Partner Farms" },
+      { "value": "24h", "label": "Quick Order Dispatch" },
+      { "value": "25", "label": "Districts Covered" }
+    ]
+  },
+  "wholesale": {
+    "badge": "B2B Solutions",
+    "title": "Wholesale & Commercial Supply",
+    "subtitle": "Dependable volume supply for supermarkets, hotels, restaurants, bakeries, and regional distributors across Sri Lanka with customized tiered pricing.",
+    "tiers": [
+      {
+        "qty": "10 to 49 Units",
+        "discount": "15% Off Retail",
+        "benefits": "Standard bulk packaging, 48h dispatch, islandwide courier delivery"
+      },
+      {
+        "qty": "50 to 99 Units",
+        "discount": "25% Off Retail",
+        "benefits": "Priority batch allocation, customized labeling options, credit terms on approval"
+      },
+      {
+        "qty": "100+ Units",
+        "discount": "35% Off Retail",
+        "benefits": "Direct factory freight, dedicated account manager, free sample testing kits"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "q": "How can I place an order on this website?",
+      "a": "Browse our catalog, add items to your cart, and proceed to checkout. Enter your delivery address and contact number. Once submitted, our Wattegama dispatch team confirms your order via WhatsApp or phone call."
+    },
+    {
+      "q": "Are payment gateways supported?",
+      "a": "We currently process orders through Cash on Delivery (COD) and Direct Bank Transfer upon order confirmation. Online card payment gateway integration is coming in the next release."
+    },
+    {
+      "q": "What is the delivery timeline for orders across Sri Lanka?",
+      "a": "Orders within the Kandy district are delivered within 24 to 48 hours. Orders to Colombo, Western Province, and other islandwide locations arrive within 2 to 4 business days via registered courier."
+    },
+    {
+      "q": "How does wholesale ordering work for commercial businesses?",
+      "a": "You can select products and choose wholesale quantities in the wholesale calculator or product detail modal. For recurring bulk supplies or customized export packaging, reach out directly to 077 737 2863 or dumbaraproducts.dpl@gmail.com."
+    },
+    {
+      "q": "Is your Kithul Treacle certified pure without added sugar?",
+      "a": "Yes. Every single drop of Dumbara Kithul Treacle is pure reduced Caryota urens palm sap with no added cane sugar, no high-fructose syrup, and no synthetic preservatives."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "kithul",
+    "name": "Kithul Sweeteners",
+    "sinhalaName": "කිතුල් නිෂ්පාදන",
+    "description": "100% pure artisan treacle and jaggery harvested traditionally from Dumbara valley palms.",
+    "tag": "Traditional Heritage",
+    "image": "assets/images/cat-kithul.jpg"
+  },
+  {
+    "id": "spices",
+    "name": "Ceylon Spices",
+    "sinhalaName": "කුළුබඩු",
+    "description": "Highland grown true cinnamon, bold black pepper, and whole fragrant green cardamom.",
+    "tag": "Direct from Kandy",
+    "image": "assets/images/cat-spices.jpg"
+  },
+  {
+    "id": "coconut",
+    "name": "Organic Coconut",
+    "sinhalaName": "පොල් ආශ්‍රිත නිෂ්පාදන",
+    "description": "Cold-pressed extra virgin coconut oil and certified organic culinary essentials.",
+    "tag": "Pure & Cold Pressed",
+    "image": "assets/images/cat-coconut.jpg"
+  },
+  {
+    "id": "tea",
+    "name": "Highland Tea",
+    "sinhalaName": "තේ නිෂ්පාදන",
+    "description": "Single-estate high grown Ceylon BOPF and artisanal whole leaf green infusions.",
+    "tag": "Fresh Harvest",
+    "image": "assets/images/cat-tea.jpg"
+  },
+  {
+    "id": "wholesale",
+    "name": "Wholesale Bulk",
+    "sinhalaName": "තොග ඇණවුම්",
+    "description": "Commercial supply packs for hotels, restaurants, bakeries, and retail grocers across Sri Lanka.",
+    "tag": "B2B Volume Rates",
+    "image": "assets/images/cat-wholesale.jpg"
+  }
+]

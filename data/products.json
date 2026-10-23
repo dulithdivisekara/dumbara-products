@@ -1,0 +1,362 @@
+[
+  {
+    "id": "dp-001",
+    "name": "Pure Dumbara Kithul Treacle",
+    "sinhalaName": "පිරිසිදු දුම්බර කිතුල් පැණි",
+    "category": "kithul",
+    "retailPrice": 1850,
+    "wholesalePrice": 1450,
+    "wholesaleMinQty": 12,
+    "unit": "750ml Glass Bottle",
+    "inStock": true,
+    "stockCount": 85,
+    "rating": 4.9,
+    "reviewCount": 48,
+    "badge": "Best Seller",
+    "image": "assets/images/prod-kithul-treacle.jpg",
+    "shortDesc": "100% natural, unadulterated highland Kithul sap boiled traditionally in copper cauldrons.",
+    "description": "Crafted in the pristine highlands of Dumbara, this treacle is tapped by hereditary artisans using centuries-old techniques. Free from artificial sugars, preservatives, or artificial coloring. Ideal with curd, pancakes, desserts, or as a low-glycemic natural sweetener for teas and baking.",
+    "features": [
+      "No added cane sugar or glucose syrup",
+      "Traditional slow fire reduction in copper vats",
+      "Low glycemic index natural sweetener",
+      "Batch tested for purity and Brix consistency"
+    ],
+    "specifications": {
+      "Origin": "Wattegama, Kandy District",
+      "Net Volume": "750ml",
+      "Shelf Life": "24 Months",
+      "Packaging": "Tamper-evident glass bottle"
+    }
+  },
+  {
+    "id": "dp-002",
+    "name": "Traditional Kithul Jaggery Block",
+    "sinhalaName": "සාම්ප්‍රදායික කිතුල් හකුරු",
+    "category": "kithul",
+    "retailPrice": 1400,
+    "wholesalePrice": 1100,
+    "wholesaleMinQty": 15,
+    "unit": "500g Pack",
+    "inStock": true,
+    "stockCount": 64,
+    "rating": 4.8,
+    "reviewCount": 36,
+    "badge": "Organic",
+    "image": "assets/images/prod-kithul-jaggery.jpg",
+    "shortDesc": "Solid artisanal jaggery half-spheres with deep caramel notes and a melt-in-mouth texture.",
+    "description": "Prepared from reduced Dumbara Kithul inflorescence sap poured into coconut shell molds. Deliciously rich, aromatic, and free from added cane sugar. The perfect partner for Ceylon black tea, traditional sweetmeats, and daily wellness.",
+    "features": [
+      "Natural coconut shell molding",
+      "Rich in natural potassium, iron, and minerals",
+      "Zero chemical additives or preservatives",
+      "Hygienically vacuum sealed for freshness"
+    ],
+    "specifications": {
+      "Origin": "Pathadumbara, Central Province",
+      "Net Weight": "500g",
+      "Shelf Life": "18 Months",
+      "Storage": "Cool dry place in airtight container"
+    }
+  },
+  {
+    "id": "dp-003",
+    "name": "Pure Ceylon Cinnamon Sticks Alba Grade",
+    "sinhalaName": "සැබෑ කුරුඳු පොතු (ඇල්බා ශ්‍රේණිය)",
+    "category": "spices",
+    "retailPrice": 2200,
+    "wholesalePrice": 1750,
+    "wholesaleMinQty": 10,
+    "unit": "100g Sealed Pouch",
+    "inStock": true,
+    "stockCount": 110,
+    "rating": 5.0,
+    "reviewCount": 52,
+    "badge": "Export Grade",
+    "image": "assets/images/prod-cinnamon-alba.jpg",
+    "shortDesc": "Pencil-thin Alba grade true Ceylon cinnamon quills with exquisite sweet aroma.",
+    "description": "The highest and most prized grade of true Ceylon cinnamon (Cinnamomum verum). Hand-rolled into delicate pencil-thin quills with smooth outer layers. Contains safe, negligible levels of coumarin unlike harsh cassia substitutes.",
+    "features": [
+      "Certified 100% True Ceylon Cinnamon (Alba)",
+      "Ultra-low coumarin level under 0.004%",
+      "Sweet, warm, and delicate aromatic bouquet",
+      "Hand peeled by master spice peelers"
+    ],
+    "specifications": {
+      "Grade": "Alba (Highest Export Standard)",
+      "Net Weight": "100g",
+      "Form": "Whole Quills (Pencil-thin)",
+      "Shelf Life": "36 Months"
+    }
+  },
+  {
+    "id": "dp-004",
+    "name": "Dumbara Grade 1 Black Pepper",
+    "sinhalaName": "දුම්බර ගම්මිරිස් (1 වන ශ්‍රේණිය)",
+    "category": "spices",
+    "retailPrice": 1250,
+    "wholesalePrice": 950,
+    "wholesaleMinQty": 20,
+    "unit": "250g Pouch",
+    "inStock": true,
+    "stockCount": 140,
+    "rating": 4.9,
+    "reviewCount": 41,
+    "badge": "Hot & Bold",
+    "image": "assets/images/prod-black-pepper.jpg",
+    "shortDesc": "Sun-dried bold black peppercorns renowned for high piperine heat and essential oils.",
+    "description": "Cultivated on the cool, fertile slopes of the Knuckles mountain range foothills. Dumbara pepper is globally recognized for superior piperine content (up to 6.5%), delivering an unmatched fiery bite and robust piney fragrance.",
+    "features": [
+      "High piperine content above 6%",
+      "Bold uniform corns 550+ GL density",
+      "Naturally sun-dried and machine-cleaned",
+      "Essential seasoning for curries, roasts, and rubs"
+    ],
+    "specifications": {
+      "Grade": "Grade 1 Bold Black Peppercorns",
+      "Net Weight": "250g",
+      "Bulk Density": "550 g/L",
+      "Shelf Life": "24 Months"
+    }
+  },
+  {
+    "id": "dp-005",
+    "name": "Green Cardamom Pods Jumbo Select",
+    "sinhalaName": "සුවඳ කරදමුංගු",
+    "category": "spices",
+    "retailPrice": 3400,
+    "wholesalePrice": 2800,
+    "wholesaleMinQty": 8,
+    "unit": "100g Jar",
+    "inStock": true,
+    "stockCount": 42,
+    "rating": 4.9,
+    "reviewCount": 29,
+    "badge": "Premium",
+    "image": "assets/images/prod-cardamom.jpg",
+    "shortDesc": "Intensely fragrant jumbo green cardamom pods with plump aromatic black seeds.",
+    "description": "Hand-picked from shaded highland spice gardens in Wattegama. Cured under gentle controlled temperatures to retain their vivid green hue and high cineole volatile oil concentration.",
+    "features": [
+      "Hand-sorted jumbo sized 8mm+ pods",
+      "Packed with volatile essential oils",
+      "Warm eucalyptus and citrus aroma profile",
+      "Glass jar preserve freshness"
+    ],
+    "specifications": {
+      "Origin": "Central Province, Sri Lanka",
+      "Net Weight": "100g",
+      "Pod Size": "Jumbo 8mm+",
+      "Shelf Life": "24 Months"
+    }
+  },
+  {
+    "id": "dp-006",
+    "name": "Cold-Pressed Virgin Coconut Oil",
+    "sinhalaName": "කන්‍යා පොල්තෙල් (සීතල පීඩිත)",
+    "category": "coconut",
+    "retailPrice": 1650,
+    "wholesalePrice": 1300,
+    "wholesaleMinQty": 12,
+    "unit": "500ml Glass Jar",
+    "inStock": true,
+    "stockCount": 78,
+    "rating": 4.8,
+    "reviewCount": 33,
+    "badge": "100% Pure",
+    "image": "assets/images/prod-virgin-coconut-oil.jpg",
+    "shortDesc": "Unrefined, raw, wet-milled virgin coconut oil with fresh tropical aroma.",
+    "description": "Extracted strictly under 45 degrees Celsius from the fresh white meat of mature Ceylon coconuts. Retains all natural lauric acid, antioxidants, and delicate coconut aroma. Ideal for gourmet cooking, daily keto wellness, and natural skin hydration.",
+    "features": [
+      "Cold-pressed, unbleached, and non-deodorized",
+      "Rich in 50%+ Lauric Acid and MCT fats",
+      "Clear as crystal in warm temperatures",
+      "Zero trans fats and zero chemicals"
+    ],
+    "specifications": {
+      "Method": "Centrifuge cold extraction",
+      "Net Volume": "500ml",
+      "Packaging": "Wide-mouth glass jar",
+      "Shelf Life": "24 Months"
+    }
+  },
+  {
+    "id": "dp-007",
+    "name": "Artisanal Roasted Ceylon Curry Powder",
+    "sinhalaName": "බැදපු තුනපහ කුඩු",
+    "category": "spices",
+    "retailPrice": 950,
+    "wholesalePrice": 720,
+    "wholesaleMinQty": 25,
+    "unit": "250g Zip Pouch",
+    "inStock": true,
+    "stockCount": 95,
+    "rating": 4.7,
+    "reviewCount": 24,
+    "badge": "Chef Recipe",
+    "image": "assets/images/prod-curry-powder.jpg",
+    "shortDesc": "Heirloom slow-roasted spice blend with rich toasted aromas for meat and vegetable curries.",
+    "description": "A proprietary Kandyan family recipe combining coriander, cumin, fennel, fenugreek, mustard, sweet cinnamon, and curry leaves slow-roasted over low wood flame. Gives traditional curries an authentic dark color, rich body, and irresistible fragrance.",
+    "features": [
+      "14 traditional whole spices slow roasted",
+      "No salt, MSG, or artificial coloring fillers",
+      "Authentic Kandyan village recipe",
+      "Resealable multi-layer foil pouch"
+    ],
+    "specifications": {
+      "Form": "Finely milled powder",
+      "Net Weight": "250g",
+      "Dietary": "Vegan, Gluten-free",
+      "Shelf Life": "18 Months"
+    }
+  },
+  {
+    "id": "dp-008",
+    "name": "Natural Dumbara Kithul Flour",
+    "sinhalaName": "ස්වාභාවික කිතුල් පිටි",
+    "category": "kithul",
+    "retailPrice": 1150,
+    "wholesalePrice": 880,
+    "wholesaleMinQty": 15,
+    "unit": "400g Pack",
+    "inStock": true,
+    "stockCount": 52,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Gluten Free",
+    "image": "assets/images/prod-kithul-flour.jpg",
+    "shortDesc": "Pure starch extracted from mature Kithul palm pith, renowned for natural cooling properties.",
+    "description": "Traditional Ayurvedic superfood extracted from the pith of the Kithul palm tree. Celebrated for centuries for its soothing and cooling properties on the digestive system. Used to prepare delicious traditional Kithul Thalapa, porridge, and healthy puddings.",
+    "features": [
+      "100% natural plant-based complex carbohydrate",
+      "Ayurvedic cooling food for stomach comfort",
+      "Naturally gluten-free and easy to digest",
+      "Finely ground and sifted"
+    ],
+    "specifications": {
+      "Origin": "Wattegama Valley",
+      "Net Weight": "400g",
+      "Type": "Unmodified palm starch",
+      "Shelf Life": "12 Months"
+    }
+  },
+  {
+    "id": "dp-009",
+    "name": "Dumbara Highlands BOPF Black Tea",
+    "sinhalaName": "දුම්බර උස්බිම් තේ (BOPF)",
+    "category": "tea",
+    "retailPrice": 1350,
+    "wholesalePrice": 1050,
+    "wholesaleMinQty": 20,
+    "unit": "400g Foil Pack",
+    "inStock": true,
+    "stockCount": 120,
+    "rating": 4.9,
+    "reviewCount": 38,
+    "badge": "Single Origin",
+    "image": "assets/images/prod-ceylon-tea.jpg",
+    "shortDesc": "Brisk, full-bodied Ceylon Broken Orange Pekoe Fannings with golden amber liquor.",
+    "description": "Harvested from estate plantations overlooking the mist-covered Knuckles mountain range. This tea brews into a bright coppery liquor with invigorating strength, perfect for your morning cup with or without milk.",
+    "features": [
+      "High grown single origin Ceylon tea",
+      "Brisk astringency and deep golden amber cup",
+      "Foil inner lining keeps mountain aroma locked",
+      "Export certified Ceylon Lion logo standard"
+    ],
+    "specifications": {
+      "Grade": "BOPF (Broken Orange Pekoe Fannings)",
+      "Net Weight": "400g",
+      "Elevation": "High Grown (1,200m+)",
+      "Shelf Life": "36 Months"
+    }
+  },
+  {
+    "id": "dp-010",
+    "name": "Dumbara Commercial Treacle Wholesale Jar",
+    "sinhalaName": "තොග කිතුල් පැණි කෑන් (ලීටර් 5)",
+    "category": "wholesale",
+    "retailPrice": 11500,
+    "wholesalePrice": 9200,
+    "wholesaleMinQty": 4,
+    "unit": "5 Liter Heavy Duty Canister",
+    "inStock": true,
+    "stockCount": 30,
+    "rating": 5.0,
+    "reviewCount": 15,
+    "badge": "Bulk Value",
+    "image": "assets/images/prod-wholesale-treacle.jpg",
+    "shortDesc": "Bulk 5-liter food grade container for restaurants, hotels, catering, and bakeries.",
+    "description": "Designed specifically for commercial kitchens, boutique hotels, pastry makers, and bulk distributors. Delivers the exact same 100% pure Dumbara artisanal quality in high-capacity food-safe HDPE containers at volume discount rates.",
+    "features": [
+      "High volume 5 liter commercial supply",
+      "Significant cost savings for bulk usage",
+      "Tamper-proof seal with heavy duty pour spout",
+      "Continuous batch availability with lab certificate"
+    ],
+    "specifications": {
+      "Capacity": "5 Liters (approx. 6.8kg)",
+      "Container": "Food grade HDPE with carry handle",
+      "Wholesale MOA": "Minimum 4 canisters for islandwide dispatch",
+      "Shelf Life": "24 Months"
+    }
+  },
+  {
+    "id": "dp-011",
+    "name": "Organic White Pepper Whole & Powder",
+    "sinhalaName": "සුදු ගම්මිරිස්",
+    "category": "spices",
+    "retailPrice": 1600,
+    "wholesalePrice": 1250,
+    "wholesaleMinQty": 12,
+    "unit": "200g Jar",
+    "inStock": true,
+    "stockCount": 45,
+    "rating": 4.8,
+    "reviewCount": 18,
+    "badge": "Gourmet",
+    "image": "assets/images/prod-white-pepper.jpg",
+    "shortDesc": "Mild earthy heat for delicate cream soups, sauces, seafood, and light marinades.",
+    "description": "Produced by soaking fully ripe red pepper berries in mountain stream water before gently rubbing away the dark outer skin. Offers subtle earthy warmth without darkening delicate white gravies or cream dishes.",
+    "features": [
+      "Processed using pristine mountain stream water",
+      "Clean subtle heat with herbal notes",
+      "No bleaching agents or chemical washing",
+      "Uniform cream white berries"
+    ],
+    "specifications": {
+      "Grade": "Highland Select White Pepper",
+      "Net Weight": "200g",
+      "Form": "Whole dried berries",
+      "Shelf Life": "24 Months"
+    }
+  },
+  {
+    "id": "dp-012",
+    "name": "Crushed Spicy Chili Flakes Export Pack",
+    "sinhalaName": "කෑලි මිරිස් (විශේෂ ශ්‍රේණිය)",
+    "category": "spices",
+    "retailPrice": 850,
+    "wholesalePrice": 620,
+    "wholesaleMinQty": 30,
+    "unit": "250g Pack",
+    "inStock": true,
+    "stockCount": 130,
+    "rating": 4.7,
+    "reviewCount": 27,
+    "badge": "Vibrant Red",
+    "image": "assets/images/prod-chili-flakes.jpg",
+    "shortDesc": "Sun-ripened fiery Ceylon chilies crushed with seeds for intense heat and color.",
+    "description": "Selected ripe red pods sun-cured and coarsely crushed to preserve rich capsaicin oils and vibrant crimson color. Ideal for pol sambol, fried rice, devilled dishes, and table seasoning.",
+    "features": [
+      "Natural sun drying method",
+      "High natural capsaicin warmth",
+      "No artificial Sudan red color dyes",
+      "Moisture-proof airtight pack"
+    ],
+    "specifications": {
+      "Net Weight": "250g",
+      "Origin": "Sri Lanka",
+      "Form": "Coarse crushed flakes with seeds",
+      "Shelf Life": "18 Months"
+    }
+  }
+]

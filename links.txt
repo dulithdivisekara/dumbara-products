@@ -1,0 +1,13 @@
+facebook page : https://www.facebook.com/profile.php?id=61572546974606
+adress : 
+44/A, Dumbara Niwasa, Narandanda Road, Wattegama, Kandy.
+contact no: 
+077 737 2863
+email ; dumbaraproducts.dpl@gmail.com
+
+---
+
+figma template : https://www.figma.com/design/odW0fSYWB5yrx02nimnPmM/Dumbara-Products?m=auto&t=xOsVSwkgSfHjLMnj-6
+
+dumbara products is a manufacturing and distribution company based in kandy. we need to create aweb page to sell our products into wholesale and retail clients. as tihs is based in srilanka. currency should be in "රු" or LKR.
+we can't install payment gateway for this atm. need to make this site upto ordering point. without payment gateway. i'll attach payment gateway later. this is a demo site. need to add all the crud functions for each user. but for admin. just mention a link in footer. think yourself and tell me what crud fucntions and pages should need to add to this site. first of all need to clone the figma template using figma mcp. and customize it into my requirement. use exact template. it's a highly professional shopify template. don't use em dashed along the page. you can observe the theme color theme by using logo. it also in project folder. all the contents in the site should not bbe hard coded. need to use scripts or jsons for easy updatability and efficiency. 

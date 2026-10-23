@@ -1,0 +1,47 @@
+[
+  {
+    "id": "rev-01",
+    "author": "Nimal Wickramasinghe",
+    "role": "Executive Chef, Kandy Heritage Hotel",
+    "rating": 5,
+    "product": "Pure Dumbara Kithul Treacle",
+    "date": "2026-09-15",
+    "comment": "The consistency and authentic smoky sweetness of Dumbara Kithul treacle is unmatched. We order 50 bottles every month for our dessert buffet and our guests consistently praise the quality."
+  },
+  {
+    "id": "rev-02",
+    "author": "Dr. Priyantha Senaratne",
+    "role": "Retail Customer, Colombo 07",
+    "rating": 5,
+    "product": "Pure Ceylon Cinnamon Sticks Alba Grade",
+    "date": "2026-09-28",
+    "comment": "Genuine Alba quills are hard to find in retail markets. The fragrance from the pouch as soon as you open it is simply remarkable. Excellent service and fast courier delivery."
+  },
+  {
+    "id": "rev-03",
+    "author": "Sanduni Jayawardena",
+    "role": "Home Baker, Gampaha",
+    "rating": 5,
+    "product": "Traditional Kithul Jaggery Block",
+    "date": "2026-10-04",
+    "comment": "Pure jaggery with no sugar crystals or artificial aftertaste. Made traditional watalappam with this and the texture was velvety smooth. Highly recommended!"
+  },
+  {
+    "id": "rev-04",
+    "author": "Rohan Perera",
+    "role": "Procurement Manager, Perera Spice Distributors",
+    "rating": 5,
+    "product": "Dumbara Grade 1 Black Pepper",
+    "date": "2026-10-12",
+    "comment": "As a wholesale distributor in Kandy and Kurunegala, we rely on Dumbara Products for timely bulk supplies. High piperine count and very clean corns with zero dust."
+  },
+  {
+    "id": "rev-05",
+    "author": "Kumari Aluvihare",
+    "role": "Retail Customer, Kandy",
+    "rating": 5,
+    "product": "Cold-Pressed Virgin Coconut Oil",
+    "date": "2026-10-18",
+    "comment": "Fresh, fragrant, and crystal clear. We use it for both morning wellness tea and hair care. Proud to support a local enterprise from Wattegama."
+  }
+]

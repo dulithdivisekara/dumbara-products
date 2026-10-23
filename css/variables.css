@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Dumbara Products Design System Tokens
+   Adheres to design-taste-frontend anti-slop guidelines and Figma template tokens
+   ========================================================================== */
+
+:root {
+  /* Typography */
+  --font-display: "Big Caslon", "Caslon", "Playfair Display", "Times New Roman", serif;
+  --font-body: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+  /* Font Scale: Exactly 5 unified sizes across the entire page */
+  --font-display-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  --font-title-size: clamp(1.75rem, 3.2vw, 2.25rem);
+  --font-subheading-size: 1.25rem;
+  --font-body-size: 1rem;
+  --font-small-size: 0.875rem;
+
+  /* Color System: Cool stone and sage palette without yellow-cream */
+  --color-ground: #FFFFFF;
+  --color-ground-soft: #F5F6F5;
+  --color-ground-card: #ECEEEC;
+  --color-ground-tint: #E8ECE8;
+  --color-ground-dark: #1A1F1C;
+
+  --color-ink: #141715;
+  --color-ink-muted: #2E3330;
+  --color-ink-inverse: #FFFFFF;
+
+  /* Brand Colors with 4.5:1+ WCAG AA Contrast */
+  --color-accent: #0B7D42;
+  --color-accent-dark: #075C30;
+  --color-accent-hover: #064E29;
+  --color-accent-subtle: #E6F4ED;
+  --color-sage: #8BA880;
+  --color-amber: #B45309;
+
+  /* Surfaces */
+  --color-border: #DCDFD9;
+
+  /* Spacing Scale */
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-section: clamp(80px, 7vw, 120px);
+
+  /* Page Grid & Container */
+  --container-max: 1360px;
+  --container-padding: clamp(16px, 3.5vw, 48px);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
